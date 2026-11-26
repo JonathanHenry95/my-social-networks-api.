@@ -6,6 +6,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes');
 const eventRoutes = require('./routes/eventRoutes');
+const groupRoutes = require('./routes/groupRouter');
 
 // 3. Initialise l'application Express
 const app = express();
@@ -14,6 +15,7 @@ const app = express();
 app.use(express.json());
 app.use('/api', userRoutes); // Préfixe toutes les routes utilisateur avec /api
 app.use('/api', eventRoutes); // Préfixe toutes les routes événement avec /api
+app.use('/api', groupRoutes); // Préfixe toutes les routes groupe avec /api
 
 // 5. Route de test pour vérifier que l'API tourne
 app.get('/', (req, res) => {
