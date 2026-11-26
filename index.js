@@ -5,6 +5,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes');
+const eventRoutes = require('./routes/eventRoutes');
 
 // 3. Initialise l'application Express
 const app = express();
@@ -12,6 +13,7 @@ const app = express();
 // 4. Middleware indispensable : permet à Express de lire le JSON envoyé dans les requêtes (POST, PUT)
 app.use(express.json());
 app.use('/api', userRoutes); // Préfixe toutes les routes utilisateur avec /api
+app.use('/api', eventRoutes); // Préfixe toutes les routes événement avec /api
 
 // 5. Route de test pour vérifier que l'API tourne
 app.get('/', (req, res) => {
