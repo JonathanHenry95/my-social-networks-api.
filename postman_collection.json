@@ -1,0 +1,1014 @@
+{
+  "info": {
+    "_postman_id": "386373d9-1ce2-4b08-90f6-bb28f6cfab4a",
+    "name": "My Social Networks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60283765",
+    "_collection_link": "https://go.postman.co/collection/60283765-386373d9-1ce2-4b08-90f6-bb28f6cfab4a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Créer un utilisateur",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"jonathan95\",\n  \"email\": \"jonathanhenry822@gmail.com\",\n  \"password\": \"password123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Récupérer tous les utilisateurs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Récupérer un utilisateur",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/users?_id=6b07fc6313fdc28ff1601ab3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "_id",
+                  "value": "6b07fc6313fdc28ff1601ab3"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un utilisateur",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/users/6b07fc6313fdc28ff1601ab3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users",
+                "6b07fc6313fdc28ff1601ab3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer un utilisateur",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/users/6b07fe8a13fdc28ff1601ab4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users",
+                "6b07fe8a13fdc28ff1601ab4"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "item": [
+        {
+          "name": "Créer un événement",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Soirée de lancement\",\n  \"description\": \"Premier événement test sur l'API\",\n  \"startDate\": \"2026-12-01T19:00:00.000Z\",\n  \"endDate\": \"2026-12-01T23:00:00.000Z\",\n  \"location\": \"Paris\",\n  \"visibility\": \"public\",\n  \"organizers\": [\"6b07fc6313fdc28ff1601ab3\"],\n  \"participants\": [\"6b07fc6313fdc28ff1601ab3\"],\n  \"hasShoppingList\": true,\n  \"hasCarpooling\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/events",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "events"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Récupérer tous les événements",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/events",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "events"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un événement",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/events/6b0803d10f6f97dff8be122b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "events",
+                "6b0803d10f6f97dff8be122b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer un événement",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/events/6b0803d10f6f97dff8be122b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "events",
+                "6b0803d10f6f97dff8be122b"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Groups",
+      "item": [
+        {
+          "name": "Créer un groupe",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Club Basketball\",\n  \"description\": \"Groupe pour organiser les entraînements et matchs\",\n  \"type\": \"public\",\n  \"admins\": [\"6b07fc6313fdc28ff1601ab3\"],\n  \"members\": [\"6b07fc6313fdc28ff1601ab3\"],\n  \"allowMembersToPost\": true,\n  \"allowMembersToCreateEvents\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/groups",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "groups"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Récupérer tous les groupes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/groups",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "groups"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un groupe",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/groups/6b0807fca7db57f2830a5ad4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "groups",
+                "6b0807fca7db57f2830a5ad4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer un groupe",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/groups/6b0807fca7db57f2830a5ad4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "groups",
+                "6b0807fca7db57f2830a5ad4"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Threads",
+      "item": [
+        {
+          "name": "Créer un thread",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Organisation du match de samedi\",\n  \"group\": \"6b0807fca7db57f2830a5ad4\",\n  \"createdBy\": \"6b07fc6313fdc28ff1601ab3\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/threads",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "threads"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Récupérer tous les threads",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un thread",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/threads/6b080a9faefb59d9abb8559a",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "threads",
+                "6b080a9faefb59d9abb8559a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un thread Copy",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/threads/6b080a9faefb59d9abb8559a",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "threads",
+                "6b080a9faefb59d9abb8559a"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Message",
+      "item": [
+        {
+          "name": "Créer un message",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"thread\": \"6b080a9faefb59d9abb8559a\",\n  \"author\": \"6b07fc6313fdc28ff1601ab3\",\n  \"content\": \"Qui est dispo samedi à 14h ?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/messages",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "messages"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Récupérer tous les messages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un message",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/messages/6b080c04aefb59d9abb8559f",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "messages",
+                "6b080c04aefb59d9abb8559f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/messages/6b080c04aefb59d9abb8559f",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "messages",
+                "6b080c04aefb59d9abb8559f"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Albums",
+      "item": [
+        {
+          "name": "Créer un album",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Photos de la soirée de lancement\",\n  \"description\": \"Les meilleurs moments de la soirée\",\n  \"event\": \"6b0803d10f6f97dff8be122b\",\n  \"createdBy\": \"6b07fc6313fdc28ff1601ab3\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/albums",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "albums"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Récupérer tous les albums",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un album",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/albums/6b08133828fb72e5ec3ff62b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "albums",
+                "6b08133828fb72e5ec3ff62b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer un album Copy",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/albums/6b08133828fb72e5ec3ff62b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "albums",
+                "6b08133828fb72e5ec3ff62b"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Photos",
+      "item": [
+        {
+          "name": "Créer une photo",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"album\": \"6b08137a28fb72e5ec3ff62f\",\n  \"postedBy\": \"6b07fc6313fdc28ff1601ab3\",\n  \"imageUrl\": \"https://example.com/photo-soiree.jpg\",\n  \"caption\": \"Photo de groupe à l'entrée !\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/photos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "photos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Récupérer toutes les photos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier une photo",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/photos/6b0814cf1d06dd7d5eb81fa9",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "photos",
+                "6b0814cf1d06dd7d5eb81fa9"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer une photo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/photos/6b0814cf1d06dd7d5eb81fa9",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "photos",
+                "6b0814cf1d06dd7d5eb81fa9"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Comments",
+      "item": [
+        {
+          "name": "Créer un comment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"photo\": \"6b0814cf1d06dd7d5eb81fa9\",\n  \"author\": \"6b07fc6313fdc28ff1601ab3\",\n  \"content\": \"Super ambiance sur cette photo !\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/comments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Récupérer tous les comments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/comments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un comment",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/comments/6b08155c80d19bae86c49c67",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comments",
+                "6b08155c80d19bae86c49c67"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer un comment",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/comments/6b08155c80d19bae86c49c67",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comments",
+                "6b08155c80d19bae86c49c67"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Polls",
+      "item": [
+        {
+          "name": "Créer un poll",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Organisation de la soirée de lancement\",\n  \"event\": \"6b0803d10f6f97dff8be122b\",\n  \"createdBy\": \"6b07fc6313fdc28ff1601ab3\",\n  \"questions\": [\n    {\n      \"questionText\": \"Quel thème musical préférez-vous ?\",\n      \"options\": [\n        { \"optionText\": \"Rap FR / US\" },\n        { \"optionText\": \"Afro House\" },\n        { \"optionText\": \"Classiques 2000\" }\n      ]\n    },\n    {\n      \"questionText\": \"À quelle heure arrivez-vous ?\",\n      \"options\": [\n        { \"optionText\": \"19h00\" },\n        { \"optionText\": \"20h30\" }\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/polls",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "polls"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Récupérer les polls",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Voter sur un poll",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"6b07fc6313fdc28ff1601ab3\",\n  \"questionId\": \"6b0817379fed13d688e171ad\",\n  \"optionId\": \"6b0817379fed13d688e171ae\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/polls/6b0817379fed13d688e171ac/vote",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "polls",
+                "6b0817379fed13d688e171ac",
+                "vote"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tickets",
+      "item": [
+        {
+          "name": "Créer un Ticket_type",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"event\": \"6b0803d10f6f97dff8be122b\",\n  \"createdBy\": \"6b07fc6313fdc28ff1601ab3\",\n  \"name\": \"Pass VIP\",\n  \"price\": 25,\n  \"quantity\": 50\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ticket-types",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "ticket-types"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Créer un ticket",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ticketType\": \"6b081ac6d2f9624f8319b2e2\",\n  \"firstName\": \"Lucas\",\n  \"lastName\": \"Martin\",\n  \"address\": \"12 Rue de Rivoli, 75001 Paris\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/tickets",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tickets"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Shopping",
+      "item": [
+        {
+          "name": "Créer une shopping list",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"event\": \"6b0804bb0f6f97dff8be122d\",\n  \"name\": \"Pack de boissons\",\n  \"quantity\": 3,\n  \"arrivalTime\": \"19h15\",\n  \"broughtBy\": \"6b07fc6313fdc28ff1601ab3\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/shopping-items",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "shopping-items"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "CarPool",
+      "item": [
+        {
+          "name": "Créer un carpool",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"event\": \"6b0804bb0f6f97dff8be122d\",\n  \"driver\": \"6b07fc6313fdc28ff1601ab3\",\n  \"departureLocation\": \"Saint-Maur-des-Fossés (Gare RER)\",\n  \"departureTime\": \"2026-12-01T18:15:00.000Z\",\n  \"price\": 5,\n  \"availableSeats\": 3,\n  \"maxDetourMinutes\": 15\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/carpools",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "carpools"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Créer une réservation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"6b07fc6313fdc28ff1601ab3\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/carpools/6b081d464bb6cd61de6c7ffc/join",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "carpools",
+                "6b081d464bb6cd61de6c7ffc",
+                "join"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
