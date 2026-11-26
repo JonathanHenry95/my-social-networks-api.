@@ -7,6 +7,12 @@ const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const groupRoutes = require('./routes/groupRouter');
+const threadRoutes = require('./routes/threadRoutes');
+const messageRoutes = require('./routes/messageRoutes');
+const albumRoutes = require('./routes/albumRoutes');
+const photoRoutes = require('./routes/photoRoutes');
+const commentRoutes = require('./routes/commentRoutes');
+const pollRoutes = require('./routes/pollRoutes');
 
 // 3. Initialise l'application Express
 const app = express();
@@ -16,6 +22,12 @@ app.use(express.json());
 app.use('/api', userRoutes); // Préfixe toutes les routes utilisateur avec /api
 app.use('/api', eventRoutes); // Préfixe toutes les routes événement avec /api
 app.use('/api', groupRoutes); // Préfixe toutes les routes groupe avec /api
+app.use('/api', threadRoutes); // Préfixe toutes les routes fil de discussion avec /api
+app.use('/api', messageRoutes); // Préfixe toutes les routes message avec /api
+app.use('/api', albumRoutes); // Préfixe toutes les routes album avec /api
+app.use('/api', photoRoutes); // Préfixe toutes les routes photo avec /api
+app.use('/api', commentRoutes); // Préfixe toutes les routes commentaire avec /api
+app.use('/api', pollRoutes); // Préfixe toutes les routes sondage avec /api
 
 // 5. Route de test pour vérifier que l'API tourne
 app.get('/', (req, res) => {
