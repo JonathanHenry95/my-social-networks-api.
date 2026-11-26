@@ -13,6 +13,8 @@ const albumRoutes = require('./routes/albumRoutes');
 const photoRoutes = require('./routes/photoRoutes');
 const commentRoutes = require('./routes/commentRoutes');
 const pollRoutes = require('./routes/pollRoutes');
+const ticketTypeRoutes = require('./routes/ticketTypeRoutes');
+const ticketRoutes = require('./routes/ticketRoutes');
 
 // 3. Initialise l'application Express
 const app = express();
@@ -28,6 +30,8 @@ app.use('/api', albumRoutes); // Préfixe toutes les routes album avec /api
 app.use('/api', photoRoutes); // Préfixe toutes les routes photo avec /api
 app.use('/api', commentRoutes); // Préfixe toutes les routes commentaire avec /api
 app.use('/api', pollRoutes); // Préfixe toutes les routes sondage avec /api
+app.use('/api', ticketTypeRoutes); // Préfixe toutes les routes type de ticket avec /api
+app.use('/api', ticketRoutes); // Préfixe toutes les routes ticket avec /api
 
 // 5. Route de test pour vérifier que l'API tourne
 app.get('/', (req, res) => {
